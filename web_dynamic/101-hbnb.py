@@ -13,7 +13,7 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route("/2-hbnb", strict_slashes=False)
+@app.route("/101-hbnb", strict_slashes=False)
 def hbnb():
     """Displays the main HBnB filters HTML page."""
     states = storage.all("State")
@@ -23,7 +23,7 @@ def hbnb():
     # Generate a UUID as the cache_id variable
     cache_id = uuid.uuid4()
 
-    return render_template("2-hbnb.html",
+    return render_template("101-hbnb.html",
                            states=states, amenities=amenities,
                            places=places, cache_id=cache_id)
 
